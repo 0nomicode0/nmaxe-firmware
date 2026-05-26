@@ -1,0 +1,33 @@
+idf_component_register(
+    SRCS
+        "main.c"
+        "hal/hal_uart.c"
+        "hal/hal_i2c.c"
+        "hal/hal_gpio.c"
+        "asic/bm1366.c"
+        "network/wifi.c"
+        "network/stratum.c"
+        "mining/work_manager.c"
+        "mining/sha256d.c"
+        "system/thermal.c"
+        "system/display.c"
+        "system/config.c"
+    INCLUDE_DIRS
+        "."
+        "hal"
+        "asic"
+        "network"
+        "mining"
+        "system"
+    REQUIRES
+        driver
+        esp_wifi
+        esp_netif
+        nvs_flash
+        lwip
+        freertos
+        esp_timer
+        spi_flash
+        esp_http_server
+        json
+)
